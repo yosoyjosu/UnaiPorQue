@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['websocketapp_0',['WebSocketApp',['../classes_1_1deusto_1_1spq_1_1server_1_1websockets_1_1_web_socket_app.html',1,'es::deusto::spq::server::websockets']]],
+  ['websocketapp_2ejava_1',['WebSocketApp.java',['../_web_socket_app_8java.html',1,'']]],
+  ['websocketdata_2',['WebSocketData',['../classes_1_1deusto_1_1spq_1_1server_1_1websockets_1_1_web_socket_data.html',1,'es.deusto.spq.server.websockets.WebSocketData'],['../classes_1_1deusto_1_1spq_1_1server_1_1websockets_1_1_web_socket_data.html#aab713978c82a4704665f4edc55ecc1ef',1,'es.deusto.spq.server.websockets.WebSocketData.WebSocketData()']]],
+  ['websocketdata_2ejava_3',['WebSocketData.java',['../_web_socket_data_8java.html',1,'']]],
+  ['websockethistorydata_4',['WebSocketHistoryData',['../classes_1_1deusto_1_1spq_1_1server_1_1websockets_1_1_web_socket_history_data.html',1,'es.deusto.spq.server.websockets.WebSocketHistoryData'],['../classes_1_1deusto_1_1spq_1_1server_1_1websockets_1_1_web_socket_history_data.html#ad69fad829a951c47d4384cbd0cd50882',1,'es.deusto.spq.server.websockets.WebSocketHistoryData.WebSocketHistoryData()']]],
+  ['websockethistorydata_2ejava_5',['WebSocketHistoryData.java',['../_web_socket_history_data_8java.html',1,'']]],
+  ['websocketjoindata_6',['WebSocketJoinData',['../classes_1_1deusto_1_1spq_1_1server_1_1websockets_1_1_web_socket_join_data.html',1,'es.deusto.spq.server.websockets.WebSocketJoinData'],['../classes_1_1deusto_1_1spq_1_1server_1_1websockets_1_1_web_socket_join_data.html#a6566350b2aa126ad4f5965dedf8bb1a1',1,'es.deusto.spq.server.websockets.WebSocketJoinData.WebSocketJoinData()']]],
+  ['websocketjoindata_2ejava_7',['WebSocketJoinData.java',['../_web_socket_join_data_8java.html',1,'']]],
+  ['websocketleavedata_8',['WebSocketLeaveData',['../classes_1_1deusto_1_1spq_1_1server_1_1websockets_1_1_web_socket_leave_data.html',1,'es.deusto.spq.server.websockets.WebSocketLeaveData'],['../classes_1_1deusto_1_1spq_1_1server_1_1websockets_1_1_web_socket_leave_data.html#a70153460aba003e10273149210cb94ad',1,'es.deusto.spq.server.websockets.WebSocketLeaveData.WebSocketLeaveData()']]],
+  ['websocketleavedata_2ejava_9',['WebSocketLeaveData.java',['../_web_socket_leave_data_8java.html',1,'']]],
+  ['websocketreceivedata_10',['WebSocketReceiveData',['../classes_1_1deusto_1_1spq_1_1server_1_1websockets_1_1_web_socket_receive_data.html',1,'es.deusto.spq.server.websockets.WebSocketReceiveData'],['../classes_1_1deusto_1_1spq_1_1server_1_1websockets_1_1_web_socket_receive_data.html#acdcb8a100b24f78cec57831ac4c29027',1,'es.deusto.spq.server.websockets.WebSocketReceiveData.WebSocketReceiveData()']]],
+  ['websocketreceivedata_2ejava_11',['WebSocketReceiveData.java',['../_web_socket_receive_data_8java.html',1,'']]],
+  ['websocketsenddata_12',['WebSocketSendData',['../classes_1_1deusto_1_1spq_1_1server_1_1websockets_1_1_web_socket_send_data.html',1,'es.deusto.spq.server.websockets.WebSocketSendData'],['../classes_1_1deusto_1_1spq_1_1server_1_1websockets_1_1_web_socket_send_data.html#a0337343d283579ef52c8157f4bb6c0cd',1,'es.deusto.spq.server.websockets.WebSocketSendData.WebSocketSendData()']]],
+  ['websocketsenddata_2ejava_13',['WebSocketSendData.java',['../_web_socket_send_data_8java.html',1,'']]],
+  ['websocketsessiondata_14',['WebSocketSessionData',['../classes_1_1deusto_1_1spq_1_1server_1_1websockets_1_1_web_socket_session_data.html',1,'es.deusto.spq.server.websockets.WebSocketSessionData'],['../classes_1_1deusto_1_1spq_1_1server_1_1websockets_1_1_web_socket_session_data.html#a0d579785c280a2ee6d49381900b82212',1,'es.deusto.spq.server.websockets.WebSocketSessionData.WebSocketSessionData()']]],
+  ['websocketsessiondata_2ejava_15',['WebSocketSessionData.java',['../_web_socket_session_data_8java.html',1,'']]],
+  ['websockettest_16',['WebSocketTest',['../classes_1_1deusto_1_1testing_1_1server_1_1_web_socket_test.html',1,'es::deusto::testing::server']]],
+  ['websockettest_2ejava_17',['WebSocketTest.java',['../_web_socket_test_8java.html',1,'']]],
+  ['windowlogintest_18',['windowLoginTest',['../classes_1_1deusto_1_1testing_1_1window_1_1window_login_test.html',1,'es::deusto::testing::window']]],
+  ['windowlogintest_2ejava_19',['windowLoginTest.java',['../window_login_test_8java.html',1,'']]],
+  ['windowotherstest_20',['windowOthersTest',['../classes_1_1deusto_1_1testing_1_1window_1_1window_others_test.html',1,'es::deusto::testing::window']]],
+  ['windowotherstest_2ejava_21',['windowOthersTest.java',['../window_others_test_8java.html',1,'']]]
+];

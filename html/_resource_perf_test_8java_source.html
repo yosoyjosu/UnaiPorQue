@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Pictochatnt: Fichero Fuente src/test/java/es/deusto/testing/server/ResourcePerfTest.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Pictochatnt<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">Sistema de cliente y servidor para poder hablar en diferentes salas al mismo tiempo que se dibuja</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_resource_perf_test_8java_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ResourcePerfTest.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_resource_perf_test_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacees_1_1deusto_1_1testing_1_1server.html">    1</a></span><span class="keyword">package </span>es.deusto.testing.server;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> <span class="keyword">static</span> org.junit.Assert.assertEquals;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> java.util.UUID;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> javax.jdo.JDOHelper;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> javax.jdo.PersistenceManager;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> javax.jdo.PersistenceManagerFactory;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> javax.jdo.Transaction;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> javax.ws.rs.client.Client;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> javax.ws.rs.client.ClientBuilder;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> javax.ws.rs.client.Entity;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> javax.ws.rs.client.WebTarget;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> javax.ws.rs.core.MediaType;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> javax.ws.rs.core.Response;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> javax.ws.rs.core.Response.Status.Family;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">import</span> org.glassfish.grizzly.http.server.HttpServer;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">import</span> org.junit.AfterClass;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">import</span> org.junit.Before;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">import</span> org.junit.BeforeClass;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">import</span> org.junit.Rule;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">import</span> org.junit.Test;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">import</span> org.junit.experimental.categories.Category;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">import</span> com.github.noconnor.junitperf.JUnitPerfRule;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">import</span> com.github.noconnor.junitperf.JUnitPerfTest;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">import</span> com.github.noconnor.junitperf.reporting.providers.HtmlReportGenerator;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">import</span> <a class="code hl_package" href="namespacecategories.html">categories</a>.<a class="code hl_interface" href="interfacecategories_1_1_integration_test.html">IntegrationTest</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">import</span> <a class="code hl_package" href="namespacecategories.html">categories</a>.<a class="code hl_interface" href="interfacecategories_1_1_performance_test.html">PerformanceTest</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">import</span> es.deusto.spq.pojo.RegisterData;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">import</span> es.deusto.spq.pojo.SessionData;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">import</span> es.deusto.spq.pojo.UserData;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">import</span> es.deusto.spq.server.Main;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">import</span> es.deusto.spq.server.jdo.User;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>@Category({ <a class="code hl_interface" href="interfacecategories_1_1_integration_test.html">IntegrationTest</a>.class, PerformanceTest.class })</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classes_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test.html">   40</a></span><span class="keyword">public</span> <span class="keyword">class</span> <a class="code hl_class" href="classes_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test.html">ResourcePerfTest</a> {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> PersistenceManagerFactory pmf = JDOHelper.getPersistenceManagerFactory(<span class="stringliteral">&quot;datanucleus.properties&quot;</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">private</span> <span class="keyword">static</span> HttpServer server;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">private</span> WebTarget target;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">int</span> contador;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    @Rule</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classes_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test.html#a1c4aa8d384766d082fcd1fbe004853ce">   49</a></span>    <span class="keyword">public</span> JUnitPerfRule perfTestRule = <span class="keyword">new</span> JUnitPerfRule(<span class="keyword">new</span> HtmlReportGenerator(<span class="stringliteral">&quot;target/junitperf/report.html&quot;</span>));</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    @BeforeClass</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classes_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test.html#aabc24d511d30d24dfbe3284aceb23f21">   52</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classes_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test.html#aabc24d511d30d24dfbe3284aceb23f21">prepareTests</a>() throws Exception {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="comment">// start the server</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        server = <a class="code hl_class" href="classes_1_1deusto_1_1spq_1_1server_1_1_main.html">Main</a>.<a class="code hl_function" href="classes_1_1deusto_1_1spq_1_1server_1_1_main.html#acff2ade4e7b4e7974053e4c2b2f503a7">startServer</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        contador = 1;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    @Before</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classes_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test.html#a2357378ea39d4cb7e43728b23cff6084">   61</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classes_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test.html#a2357378ea39d4cb7e43728b23cff6084">setUp</a>() {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="comment">// create the client</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        Client c = ClientBuilder.newClient();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        target = c.target(<a class="code hl_class" href="classes_1_1deusto_1_1spq_1_1server_1_1_main.html">Main</a>.<a class="code hl_variable" href="classes_1_1deusto_1_1spq_1_1server_1_1_main.html#aaec03f6dfec6da3b8968a4eb0ade1308">BASE_URI</a>).path(<span class="stringliteral">&quot;resource&quot;</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    @AfterClass</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classes_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test.html#ad274138a8de019c96d52296ac14f348e">   67</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classes_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test.html#ad274138a8de019c96d52296ac14f348e">tearDownServer</a>() throws Exception {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        server.shutdown();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="comment">//Esto borra la base de datos</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        PersistenceManager pm = pmf.getPersistenceManager();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        Transaction tx = pm.currentTransaction();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            tx.begin();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            pm.newQuery(<a class="code hl_class" href="classes_1_1deusto_1_1spq_1_1server_1_1jdo_1_1_user.html">User</a>.class).deletePersistentAll();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            tx.commit();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        } <span class="keywordflow">finally</span> {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">if</span> (tx.isActive()) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                tx.rollback();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            pm.close();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    @Test</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    @JUnitPerfTest(threads = 1, durationMs = 2000)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classes_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test.html#a9f32d8e1d420b3e4a76e45370dc367df">   86</a></span>    public <span class="keywordtype">void</span> testRegisterUser() {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <a class="code hl_class" href="classes_1_1deusto_1_1spq_1_1pojo_1_1_register_data.html">RegisterData</a> user = <span class="keyword">new</span> <a class="code hl_class" href="classes_1_1deusto_1_1spq_1_1pojo_1_1_register_data.html">RegisterData</a>();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        user.<a class="code hl_function" href="classes_1_1deusto_1_1spq_1_1pojo_1_1_register_data.html#ae7543659c686998679d750f3915556e8">setLogin</a>(<span class="stringliteral">&quot;prueba-&quot;</span>+contador);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        contador+=1;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        user.<a class="code hl_function" href="classes_1_1deusto_1_1spq_1_1pojo_1_1_register_data.html#adfc0b46192dcc39adf8599b2c947a122">setPassword</a>(<span class="stringliteral">&quot;1234&quot;</span>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        Response response = target.path(<span class="stringliteral">&quot;register&quot;</span>)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            .request(MediaType.APPLICATION_JSON)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            .post(Entity.entity(user, MediaType.APPLICATION_JSON));</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        assertEquals(Family.SUCCESSFUL, response.getStatusInfo().getFamily());</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    @Test</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    @JUnitPerfTest(threads = 1, durationMs = 5000)</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classes_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test.html#a94408155ddba298b7b89b6285996c2c4">  103</a></span>    public <span class="keywordtype">void</span> TestLogginUser() {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <a class="code hl_class" href="classes_1_1deusto_1_1spq_1_1pojo_1_1_register_data.html">RegisterData</a> user = <span class="keyword">new</span> <a class="code hl_class" href="classes_1_1deusto_1_1spq_1_1pojo_1_1_register_data.html">RegisterData</a>();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        user.<a class="code hl_function" href="classes_1_1deusto_1_1spq_1_1pojo_1_1_register_data.html#ae7543659c686998679d750f3915556e8">setLogin</a>(<span class="stringliteral">&quot;prueba-&quot;</span>+contador);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        contador+=1;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        user.<a class="code hl_function" href="classes_1_1deusto_1_1spq_1_1pojo_1_1_register_data.html#adfc0b46192dcc39adf8599b2c947a122">setPassword</a>(<span class="stringliteral">&quot;1234&quot;</span>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        Response response = target.path(<span class="stringliteral">&quot;register&quot;</span>)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            .request(MediaType.APPLICATION_JSON)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            .post(Entity.entity(user, MediaType.APPLICATION_JSON));</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        Response response1 = target.path(<span class="stringliteral">&quot;login&quot;</span>)</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                .request(MediaType.APPLICATION_JSON)</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                .post(Entity.entity(user, MediaType.APPLICATION_JSON));</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        assertEquals(Family.SUCCESSFUL, response1.getStatusInfo().getFamily());</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="comment">//TODO ESTO NO FUNCIONA (Eliminar?)</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment"></span>    @Test</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    @JUnitPerfTest(threads = 1, durationMs = 5000)</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="classes_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test.html#a5d96f2d14059242c18ee9f793707c96f">  149</a></span>    public <span class="keywordtype">void</span> TestLogOutUser() {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <a class="code hl_class" href="classes_1_1deusto_1_1spq_1_1pojo_1_1_register_data.html">RegisterData</a> user = <span class="keyword">new</span> <a class="code hl_class" href="classes_1_1deusto_1_1spq_1_1pojo_1_1_register_data.html">RegisterData</a>();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        user.<a class="code hl_function" href="classes_1_1deusto_1_1spq_1_1pojo_1_1_register_data.html#ae7543659c686998679d750f3915556e8">setLogin</a>(<span class="stringliteral">&quot;prueba-&quot;</span>+contador);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        contador+=1;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        user.<a class="code hl_function" href="classes_1_1deusto_1_1spq_1_1pojo_1_1_register_data.html#adfc0b46192dcc39adf8599b2c947a122">setPassword</a>(<span class="stringliteral">&quot;1234&quot;</span>);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        Response response = target.path(<span class="stringliteral">&quot;register&quot;</span>)</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            .request(MediaType.APPLICATION_JSON)</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            .post(Entity.entity(user, MediaType.APPLICATION_JSON));</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        Response response1 = target.path(<span class="stringliteral">&quot;login&quot;</span>)</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                .request(MediaType.APPLICATION_JSON)</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                .post(Entity.entity(user, MediaType.APPLICATION_JSON));</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        Response response2 = target.path(<span class="stringliteral">&quot;logout&quot;</span>)</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                .request(MediaType.APPLICATION_JSON)</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                .post(Entity.entity(response1.readEntity(<a class="code hl_class" href="classes_1_1deusto_1_1spq_1_1pojo_1_1_session_data.html">SessionData</a>.class).getToken(), MediaType.APPLICATION_JSON));</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        assertEquals(Family.SUCCESSFUL, response2.getStatusInfo().getFamily());</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>}</div>
+<div class="ttc" id="aclasses_1_1deusto_1_1spq_1_1pojo_1_1_register_data_html"><div class="ttname"><a href="classes_1_1deusto_1_1spq_1_1pojo_1_1_register_data.html">es.deusto.spq.pojo.RegisterData</a></div><div class="ttdef"><b>Definition:</b> <a href="_register_data_8java_source.html#l00006">RegisterData.java:6</a></div></div>
+<div class="ttc" id="aclasses_1_1deusto_1_1spq_1_1pojo_1_1_register_data_html_adfc0b46192dcc39adf8599b2c947a122"><div class="ttname"><a href="classes_1_1deusto_1_1spq_1_1pojo_1_1_register_data.html#adfc0b46192dcc39adf8599b2c947a122">es.deusto.spq.pojo.RegisterData.setPassword</a></div><div class="ttdeci">void setPassword(String password)</div><div class="ttdef"><b>Definition:</b> <a href="_register_data_8java_source.html#l00030">RegisterData.java:30</a></div></div>
+<div class="ttc" id="aclasses_1_1deusto_1_1spq_1_1pojo_1_1_register_data_html_ae7543659c686998679d750f3915556e8"><div class="ttname"><a href="classes_1_1deusto_1_1spq_1_1pojo_1_1_register_data.html#ae7543659c686998679d750f3915556e8">es.deusto.spq.pojo.RegisterData.setLogin</a></div><div class="ttdeci">void setLogin(String login)</div><div class="ttdef"><b>Definition:</b> <a href="_register_data_8java_source.html#l00026">RegisterData.java:26</a></div></div>
+<div class="ttc" id="aclasses_1_1deusto_1_1spq_1_1pojo_1_1_session_data_html"><div class="ttname"><a href="classes_1_1deusto_1_1spq_1_1pojo_1_1_session_data.html">es.deusto.spq.pojo.SessionData</a></div><div class="ttdef"><b>Definition:</b> <a href="_session_data_8java_source.html#l00006">SessionData.java:6</a></div></div>
+<div class="ttc" id="aclasses_1_1deusto_1_1spq_1_1server_1_1_main_html"><div class="ttname"><a href="classes_1_1deusto_1_1spq_1_1server_1_1_main.html">es.deusto.spq.server.Main</a></div><div class="ttdef"><b>Definition:</b> <a href="_main_8java_source.html#l00010">Main.java:10</a></div></div>
+<div class="ttc" id="aclasses_1_1deusto_1_1spq_1_1server_1_1_main_html_aaec03f6dfec6da3b8968a4eb0ade1308"><div class="ttname"><a href="classes_1_1deusto_1_1spq_1_1server_1_1_main.html#aaec03f6dfec6da3b8968a4eb0ade1308">es.deusto.spq.server.Main.BASE_URI</a></div><div class="ttdeci">static final String BASE_URI</div><div class="ttdef"><b>Definition:</b> <a href="_main_8java_source.html#l00012">Main.java:12</a></div></div>
+<div class="ttc" id="aclasses_1_1deusto_1_1spq_1_1server_1_1_main_html_acff2ade4e7b4e7974053e4c2b2f503a7"><div class="ttname"><a href="classes_1_1deusto_1_1spq_1_1server_1_1_main.html#acff2ade4e7b4e7974053e4c2b2f503a7">es.deusto.spq.server.Main.startServer</a></div><div class="ttdeci">static HttpServer startServer()</div><div class="ttdef"><b>Definition:</b> <a href="_main_8java_source.html#l00018">Main.java:18</a></div></div>
+<div class="ttc" id="aclasses_1_1deusto_1_1spq_1_1server_1_1jdo_1_1_user_html"><div class="ttname"><a href="classes_1_1deusto_1_1spq_1_1server_1_1jdo_1_1_user.html">es.deusto.spq.server.jdo.User</a></div><div class="ttdef"><b>Definition:</b> <a href="_user_8java_source.html#l00029">User.java:29</a></div></div>
+<div class="ttc" id="aclasses_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test_html"><div class="ttname"><a href="classes_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test.html">es.deusto.testing.server.ResourcePerfTest</a></div><div class="ttdef"><b>Definition:</b> <a href="_resource_perf_test_8java_source.html#l00040">ResourcePerfTest.java:40</a></div></div>
+<div class="ttc" id="aclasses_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test_html_a2357378ea39d4cb7e43728b23cff6084"><div class="ttname"><a href="classes_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test.html#a2357378ea39d4cb7e43728b23cff6084">es.deusto.testing.server.ResourcePerfTest.setUp</a></div><div class="ttdeci">void setUp()</div><div class="ttdef"><b>Definition:</b> <a href="_resource_perf_test_8java_source.html#l00061">ResourcePerfTest.java:61</a></div></div>
+<div class="ttc" id="aclasses_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test_html_aabc24d511d30d24dfbe3284aceb23f21"><div class="ttname"><a href="classes_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test.html#aabc24d511d30d24dfbe3284aceb23f21">es.deusto.testing.server.ResourcePerfTest.prepareTests</a></div><div class="ttdeci">static void prepareTests()</div><div class="ttdef"><b>Definition:</b> <a href="_resource_perf_test_8java_source.html#l00052">ResourcePerfTest.java:52</a></div></div>
+<div class="ttc" id="aclasses_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test_html_ad274138a8de019c96d52296ac14f348e"><div class="ttname"><a href="classes_1_1deusto_1_1testing_1_1server_1_1_resource_perf_test.html#ad274138a8de019c96d52296ac14f348e">es.deusto.testing.server.ResourcePerfTest.tearDownServer</a></div><div class="ttdeci">static void tearDownServer()</div><div class="ttdef"><b>Definition:</b> <a href="_resource_perf_test_8java_source.html#l00067">ResourcePerfTest.java:67</a></div></div>
+<div class="ttc" id="ainterfacecategories_1_1_integration_test_html"><div class="ttname"><a href="interfacecategories_1_1_integration_test.html">categories.IntegrationTest</a></div><div class="ttdef"><b>Definition:</b> <a href="_integration_test_8java_source.html#l00003">IntegrationTest.java:3</a></div></div>
+<div class="ttc" id="ainterfacecategories_1_1_performance_test_html"><div class="ttname"><a href="interfacecategories_1_1_performance_test.html">categories.PerformanceTest</a></div><div class="ttdef"><b>Definition:</b> <a href="_performance_test_8java_source.html#l00003">PerformanceTest.java:3</a></div></div>
+<div class="ttc" id="anamespacecategories_html"><div class="ttname"><a href="namespacecategories.html">categories</a></div><div class="ttdef"><b>Definition:</b> <a href="_integration_test_8java_source.html#l00001">IntegrationTest.java:1</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_120ed4da3e3217b1e7fc0b4f48568e79.html">test</a></li><li class="navelem"><a class="el" href="dir_97debbc39e3b917fca663601bb2b0709.html">java</a></li><li class="navelem"><a class="el" href="dir_4b96a8b33d1f8ef41fbe8cb4eb39245a.html">es</a></li><li class="navelem"><a class="el" href="dir_25b06560d1af80143ff1acfc9209093d.html">deusto</a></li><li class="navelem"><a class="el" href="dir_cfdfe6219b93c353a7303ae32538c4d1.html">testing</a></li><li class="navelem"><a class="el" href="dir_5ffbc2a8ecad3a852ec6351b6ef2a105.html">server</a></li><li class="navelem"><a class="el" href="_resource_perf_test_8java.html">ResourcePerfTest.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>
